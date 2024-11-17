@@ -1,0 +1,42 @@
+html {
+    background-color: aliceblue;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 60%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../Assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    animation: fadeIn 2s ease-in-out;
+    font-size: 50px;
+    text-align: center;
+}
+
+h2 {
+    background-color: black;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

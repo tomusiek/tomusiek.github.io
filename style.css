@@ -3,16 +3,27 @@ html {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 60%;
+    height: 100%;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    justify-content: center; /* Pozostawiamy centrowanie poziome */
     background-image: url('./Assets/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    flex-direction: column; /* Wstawienie układu w kolumnach, aby elementy były ułożone w pionie */
+    justify-content: flex-start; /* Wyrównanie zawartości do góry */
+}
+
+#main {
+    padding-top: 40%; /* Odstęp od góry */
+    text-align: center; /* Wyśrodkowanie tekstu w main */
 }
 
 h1 {
@@ -27,6 +38,7 @@ h2 {
     animation: fadeIn 2s ease-in-out;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
+    padding: 10px;
 }
 
 @keyframes fadeIn {
@@ -38,5 +50,15 @@ h2 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html, body {
+        height: 100vh;
+    }
+    body {
+        background-size: cover;
+        background-position: center;
     }
 }
